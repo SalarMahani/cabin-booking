@@ -1,12 +1,13 @@
 # 🏡
 **cabin-booking** is a cabin booking platform originally created by [Jonas Schmedtmann](https://github.com/jonasschmedtmann).<br>
 This version has been modified and Specialized by me.
-this project lets users explore cabins, filter by capacity, and book stays through interface.<br> Users can log in with their Google account, view their bookings, edit existing reservations, and book new stays using a calendar-based interface.
+this project lets users explore cabins, filter by capacity, and book stays through interface.<br> Users can log in with their Google account, view their bookings, edit existing reservations, and book new stays using a calendar-based interface.<br><br>
 
 
-
+⚠️ Important Note:<br>
+This project uses NextAuth.js for Google authentication. In some countries, access to certain Google APIs or domains used by NextAuth may be restricted.
+If you face issues during login, you may need to use a VPN to bypass regional limitations.<br><br>
 Live Demo: 👉 https://cabin-booking-orpin.vercel.app/<br>
-
 
 <br>
 
@@ -25,7 +26,7 @@ Live Demo: 👉 https://cabin-booking-orpin.vercel.app/<br>
 
 ## 🛠️ Technologies Used
 
-| Purpose         | Tools Used                          |
+| Layer	         | Tech Stack                          |
 |-----------------|-------------------------------------|
 | Frontend        | Nextjs                              |
 | Styling         | Tailwind CSS                        |
