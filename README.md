@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏡
+**cabin-booking** is a cabin booking platform originally created by [Jonas Schmedtmann](https://github.com/jonasschmedtmann).<br>
+This version has been modified and Specialized by me.
+this project lets users explore cabins, filter by capacity, and book stays through interface.<br> Users can log in with their Google account, view their bookings, edit existing reservations, and book new stays using a calendar-based interface.
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Live Demo: 👉 https://cabin-booking-orpin.vercel.app/<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<br>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+- 🏕 View a list of available cabins with images, descriptions, and capacity info
+- 🔍 Filter cabins by capacity (e.g. 2-person, 4-person, etc.)
+- 📅 Reserve a cabin using an interactive calendar
+- 🔐 Login via Google using OAuth
+- 👤 Guest area to view personal reservation history
+- 🎨 Fully responsive and styled with Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<br><br>
 
-## Deploy on Vercel
+## 🛠️ Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Purpose         | Tools Used                          |
+|-----------------|-------------------------------------|
+| Frontend        | Nextjs                              |
+| Styling         | Tailwind CSS                        |
+| UI Components   | react-day-picker, date-fns          |
+| Backend & Auth  | Supabase + NextAuth.js              |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<br><br>
+
+## 📦 Getting Started
+
+
+### 🔧 Run Locally: 
+0. ⚠️ Before running the project, you must configure Google OAuth in your Google Cloud Console:
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/SalarMahani/cabin-booking.git
+   cd cabin-booking
+   
+2. Install dependencies:
+   ```bash
+   npm install
+
+3. Configure variable environment
+   ```bash
+   SUPABASE_KEY= your_SUPABASE_KEY
+   NEXTAUTH_URL= your_NEXTAUTH_URL
+   NEXTAUTH_SECRET= your_NEXTAUTH_SECRET
+   AUTH_GOOGLE_ID= your_AUTH_GOOGLE_ID
+   AUTH_GOOGLE_SECRET= your_AUTH_GOOGLE_SECRET
+
+3. Run the dev server:
+   ```bash
+   npm run dev
+   
+4. Run the local backend:
+   ```bash
+   npm run server
+   
+5. Visit: http://localhost:3000
+
