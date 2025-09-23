@@ -19,7 +19,7 @@ Live Demo: 👉 https://cabin-booking-orpin.vercel.app/<br>
 - 📅 Reserve a cabin using an interactive calendar
 - 🔐 Login via Google using OAuth
 - 👤 Guest area to view personal reservation history
-- 🎨 Fully responsive and styled with Tailwind CSS
+- 🎨 styled with Tailwind CSS
 
 
 <br><br>
