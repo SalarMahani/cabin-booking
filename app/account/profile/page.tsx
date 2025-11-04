@@ -24,11 +24,11 @@ export default async function Page() {
 
   return (
     <div>
-      <h2 className="font-semibold text-2xl text-accent-400 mb-4">
+      <h2 className="font-semibold text-2xl text-accent-400 mb-4 max-[700px]:text-base">
         Update your guest profile
       </h2>
 
-      <p className="text-lg mb-8 text-primary-200">
+      <p className="text-lg mb-8 text-primary-200 max-[700px]:text-base">
         Providing the following information will make your check-in process
         faster and smoother. See you soon!
       </p>

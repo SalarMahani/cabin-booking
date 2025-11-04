@@ -36,7 +36,7 @@ export default async function Page() {
       </h2>
 
       {bookings.length === 0 ? (
-        <p className="text-lg">
+        <p className="text-lg max-[700px]:text-base">
           You have no reservations yet. Check out our{' '}
           <Link className="underline text-accent-500" href="/cabins">
             luxury cabins &rarr;

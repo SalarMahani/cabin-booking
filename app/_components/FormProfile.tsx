@@ -17,7 +17,7 @@ function FormProfile({ children, guest }: formProfileProps) {
     <form
       key={JSON.stringify(guest)}
       action={updateGuest}
-      className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+      className=" bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col max-[700px]:text-base max-[700px]:px-5  max-[700px]:w-[450px]"
     >
       <div className="space-y-2">
         <label>Full name</label>
@@ -25,7 +25,7 @@ function FormProfile({ children, guest }: formProfileProps) {
           defaultValue={fullName}
           name={'fullName'}
           disabled
-          className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
+          className="px-5 py-3 bg-primary-200 text-primary-800 w-full  shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400  max-[700px]:text-base"
         />
       </div>
 
@@ -35,18 +35,20 @@ function FormProfile({ children, guest }: formProfileProps) {
           defaultValue={email}
           name={'email'}
           disabled
-          className="px-5 py-3 bg-primary-800 text-primary-100 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
+          className="px-5 py-3 bg-primary-800 text-primary-100 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400  max-[700px]:text-base"
         />
       </div>
 
       <div className="space-y-2">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between  max-[700px]:text-sm">
           <label htmlFor="nationality">Where are you from?</label>
-          <img
-            src={countryFlag}
-            alt="Country flag"
-            className="h-5 rounded-sm"
-          />
+          {countryFlag ? (
+            <img
+              src={countryFlag}
+              alt="Country flag"
+              className="h-5 rounded-sm"
+            />
+          ) : null}
         </div>
 
         {children}
@@ -57,7 +59,7 @@ function FormProfile({ children, guest }: formProfileProps) {
         <input
           defaultValue={nationalID}
           name={'nationalID'}
-          className="px-5 py-3 bg-primary-800 text-primary-100 w-full shadow-sm rounded-sm"
+          className="px-5 py-3 bg-primary-800 text-primary-100 w-full shadow-sm rounded-sm  max-[700px]:text-base"
         />
       </div>
 

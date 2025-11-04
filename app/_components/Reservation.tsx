@@ -15,13 +15,16 @@ async function Reservation({ cabin }: { cabin: cabinDetailType }) {
   const session: Session | null = await auth()
   return (
     <div>
-      <h2 className="text-5xl font-semibold text-center mb-5">
+      <h2
+        className="text-5xl font-semibold text-center mb-5
+ max-[900px]:text-4xl "
+      >
         Reserve {name} today. Pay on arrival.
       </h2>
       <div
         className={
           'grid grid-cols-2 border border-primary-800 min-h-[400px] mb-10' +
-          ' text-accent-400'
+          ' text-accent-400 max-[700px]:grid-cols-1 max-[700px]:gap-6'
         }
       >
         <DateSelector
@@ -29,11 +32,13 @@ async function Reservation({ cabin }: { cabin: cabinDetailType }) {
           bookedDates={bookedDates}
           setting={setting}
         />
-        {session?.user ? (
-          <ReservationForm cabin={cabin} user={session.user} />
-        ) : (
-          <LoginMessage />
-        )}
+        <div>
+          {session?.user ? (
+            <ReservationForm cabin={cabin} user={session.user} />
+          ) : (
+            <LoginMessage />
+          )}
+        </div>
       </div>
     </div>
   )

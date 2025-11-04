@@ -38,7 +38,7 @@ function DateSelector({ cabin, setting }: dateSelector) {
   const { MinBookingLength, MaxBookingLength } = setting
 
   return (
-    <div className="flex flex-col justify-between">
+    <div className="flex flex-col w-full justify-between ">
       <DayPicker
         // className="pt-12 place-self-center border-amber-500 s"
         className={'pt-1 place-self-center'}
@@ -62,29 +62,43 @@ function DateSelector({ cabin, setting }: dateSelector) {
         selected={range}
         disabled={(curDate) => isPast(curDate)}
       />
-      <div className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]">
+      <div
+        className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]
+       max-[700px]:h-[50px]"
+      >
         <div className="flex items-baseline gap-6">
-          <p className="flex gap-2 items-baseline">
+          <p className="flex gap-2 items-baseline m-auto">
             {discount > 0 ? (
               <>
-                <span className="text-2xl">${regularPrice - discount}</span>
+                <span className="text-2xl max-[700px]:text-base">
+                  ${regularPrice - discount}
+                </span>
                 <span className="line-through font-semibold text-primary-700">
                   ${regularPrice}
                 </span>
               </>
             ) : (
-              <span className="text-2xl">${regularPrice}</span>
+              <span className="text-2xl max-[700px]:text-base">
+                ${regularPrice}
+              </span>
             )}
             <span className="">/night</span>
           </p>
           {numNights ? (
             <>
-              <p className="bg-accent-600 px-3 py-2 text-2xl">
+              <p
+                className="bg-accent-600 px-3 py-2 text-2xl  max-[1100px]:py-1 max-[1100px]:px-1
+              max-[1100px]:text-base max-[1100px]:w-[40px] max-[1100px]:m-auto"
+              >
                 <span>&times;</span> <span>{numNights}</span>
               </p>
               <p>
-                <span className="text-lg font-bold uppercase">Total</span>{' '}
-                <span className="text-2xl font-semibold">${cabinPrice}</span>
+                <span className="text-lg font-bold uppercase max-[1070px]:text-sm max-[700px]:text-sm">
+                  Total
+                </span>{' '}
+                <span className="text-2xl font-semibold max-[1070px]:text-sm">
+                  ${cabinPrice}
+                </span>
               </p>
             </>
           ) : null}

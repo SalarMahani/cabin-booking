@@ -5,8 +5,8 @@ import { Session } from 'next-auth'
 export default async function Navigation() {
   const session: Session | null = await auth()
   return (
-    <nav className="z-10 text-xl">
-      <ul className="flex gap-16 items-center">
+    <nav className="z-10 text-xl max-[640px]:text-xs">
+      <ul className="flex gap-16 items-center max-[640px]:gap-4">
         <li>
           <Link
             href="/cabins"
@@ -29,14 +29,15 @@ export default async function Navigation() {
               href={'/account'}
               className={
                 'hover:text-accent-400' +
-                ' transition-colors flex items-center justify-center gap-6 flex-row-reverse '
+                ' transition-colors flex items-center justify-center gap-6 flex-row-reverse' +
+                ' max-[640px]:gap-2 '
               }
             >
               <img
                 src={session.user.image}
                 alt={String(session.user.name)}
                 referrerPolicy={'no-referrer'}
-                className={'h-8' + ' rounded-full'}
+                className={'h-8' + ' rounded-full max-[640px]:h-6'}
               />
               <span>Guest area</span>
             </Link>

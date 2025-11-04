@@ -8,7 +8,7 @@ const josefin = Josefin_Sans({
   subsets: ['latin'],
   display: 'swap',
 })
-console.log(josefin)
+// console.log(josefin)
 export const metadata: Metadata = {
   title: {
     template: 'book cabin/ %s',
