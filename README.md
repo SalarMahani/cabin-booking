@@ -64,9 +64,4 @@ Live Demo: 👉 https://cabin-booking-orpin.vercel.app/<br>
    ```bash
    npm run dev
 
-4. Run the local backend:
-   ```bash
-   npm run server
-
-5. Visit: http://localhost:3000
 
